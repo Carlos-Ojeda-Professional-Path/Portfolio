@@ -1,0 +1,191 @@
+% ==============================================================
+%           CURRICULUM VITAE — Carlos Ojeda
+% ==============================================================
+% !TEX program = xelatex
+
+\documentclass[10pt,a4paper]{article}
+
+% --------- Paquetes ----------
+\usepackage[left=0.45in,right=0.45in,top=0.5in,bottom=0.35in]{geometry}
+\usepackage{fontspec}
+  \setmainfont{Times New Roman}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array,tabularx,enumitem,multicol,fontawesome5}
+\usepackage[normalem]{ulem}
+\usepackage{xparse}
+
+% --------- Estilo global ----------
+\linespread{1.15}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.9pt}
+
+\definecolor{myred}{HTML}{99000A}
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\textcolor{myred}{\uline{#2}}}}
+
+% --------- Columnas ----------
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedright\arraybackslash}p{0.165\linewidth}}
+
+
+% --------- Skills ----------  
+\newcommand{\skilllabel}[1]{\footnotesize\textit{#1}}
+\newcommand{\subskill}[2]{\underline{#1}: #2}
+
+\newcolumntype{t}{>{\raggedright\arraybackslash}p{0.095\linewidth}}
+\newcolumntype{d}{>{\raggedright\arraybackslash}X}
+
+% --------- Secciones ----------
+
+
+\newcommand{\cvsection}[1]{%
+  \vspace{1em}%
+  {\MakeUppercase{#1}}
+  \par\vspace{-0.7em}%
+  \rule{\linewidth}{0.4pt}
+  \par\vspace{-0.2em}}
+
+% --------- Entradas ----------
+\NewDocumentCommand{\entry}{m m m m o}{%
+  \begin{tabularx}{\linewidth}{@{}L R@{}}%
+    \,\textbf{#1}\, | \;{\small\textit{#2}}\, | \;{\small\textit{#3}} & {\small\textit{#4}}%
+  \end{tabularx}%
+  \par
+  {\IfValueT{#5}{\leftskip=2.5em #5\par}}
+  \vspace{0.45em}}
+
+\newcommand{\role}[5]{%
+  \begin{tabularx}{\linewidth}{@{}L R@{}}%
+    \,\textbf{#1}\, | \;{\small\textit{#2}}\, | \;{\small\textit{#3}} & {\small\textit{#4}}%
+  \end{tabularx}%
+  \par
+  {\leftskip=2.5em #5\par}
+  \vspace{1em}}
+
+
+\newcommand{\project}[5]{%
+  \begin{tabularx}{\linewidth}{@{}L R@{}}%
+    \,\textbf{#1}\, | \;{\small\textit{#2}}\, | \;{\small\textit{#3}} & {\small\textit{#4}}%
+  \end{tabularx}%
+  \par
+  {\leftskip=2.5em #5\par}
+  \vspace{1em}}
+
+\newcommand{\skill}[2]{%
+  \begin{tabularx}{\linewidth}{@{}t d@{}}%
+    \skilllabel{#1} & #2%
+  \end{tabularx}
+  \par\vspace{0.1em}}
+
+% --------- Listas ----------
+\setlist[itemize]{leftmargin=0pt,label={},parsep=0pt,topsep=0pt}
+
+% ==============================================================
+\begin{document}
+\pagestyle{empty}
+
+% --------- Cabecera -------------
+\begin{minipage}[t]{0.22\linewidth}
+  {\fontsize{20pt}{18pt}\selectfont\bfseries Carlos Ojeda}
+\end{minipage}
+\begin{minipage}[t]{0.3\linewidth}
+  {\fontsize{12pt}{12pt}\selectfont
+   \raisebox{0.1em}{\oldhref{https://github.com/Carlos-Ojeda}{\faGithub}}\hspace{0.5em}
+   \raisebox{0.1em}{\oldhref{https://linkedin.com/in/carlos-ojd/}{\faLinkedin}}}
+\end{minipage}
+
+\vspace{0.3\baselineskip}%
+
+\href{https://linkedin.com/in/carlos-ojd/}{linkedin.com/in/carlos-ojd/}\; | \;
+\href{https://carlos-ojeda.github.io}{carlos-ojeda.github.io}\; | \;
+\href{mailto:carlosnoel.ojedaa@gmail.com}{carlosnoel.ojedaa@gmail.com}\; | \;
+\href{tel:+526674847666}{+52 667 484 7666}\par
+
+% --------- EDUCATION -------------
+\cvsection{Education}
+
+\entry{Master in Applied Artificial Intelligence}
+      {Tec de Monterrey}{GPA 98/100}{Jan 2024 -- Present}
+
+\entry{B.S. in Computer Science and Technology}
+      {Tec de Monterrey}{GPA 98/100}{Aug 2019 -- Jun 2023}
+      [Honorable mention for outstanding academic performance.]
+
+\entry{Minor in Advanced Artificial Intelligence for Data Science}
+      {Tec de Monterrey}{GPA 98/100}{Aug 2022 -- Dec 2022}
+
+% --------- EXPERIENCE ------------
+\cvsection{Experience}
+
+\role{Machine Learning Associate}
+     {Tata Consultancy Services}
+     {Zapopan, MX}
+     {Nov 2023 -- Present}
+     {Contributed to crafting advanced classification models. Actively engaged in the implementation of cutting-edge prediction services on Google Cloud Platform (GCP) and Azure Machine Learning using TensorFlow Serving. Applied supervised machine learning models with TensorFlow and integrated LIME for model interpretability to discern feature impact.}
+
+\role{Front-End Developer}
+     {Tata Consultancy Services}
+     {Zapopan, MX}
+     {Jan 2023 -- Nov 2023}
+     {Build innovative components to be used in Home Depot's e-commerce. Engineered modern user interfaces with React components by using Ant Design System, React Testing Library, Jira and Google Cloud Platform. Efficiently deployed, integrated and maintained software engineered by team, and updated GitHub Actions to improve continuous integration practices.}
+
+\role{Junior Back-End Developer}
+     {NextLine}
+     {Zapopan, MX}
+     {Oct 2022 -- Dec 2022}
+     {Management system for money lending to people registered at IMSS. Developed Back-End authentication endpoints. Created test plans to assure software quality according to stakeholder requirements and ISO/IEC/IEEE 29119 standard. Used AWS tools to deploy the app that supports the current use of at least 200,000 employees in Mexico.}
+
+% --------- PROJECTS --------------
+\cvsection{Relevant Projects}
+
+\project{Stream Stage Prediction with ML}
+     {University of Nebraska--Lincoln}
+     {TensorFlow, Pandas, NumPy}
+     {Aug 2022 -- Dec 2022}
+     {Trained different Machine and Deep Learning models for predicting stream stage and discharge from the North Platte River.
+     State Line Weir using daylight images taken at one hour intervals from 2012 to 2019. Loss metrics were considered, selected and used to evaluate different models trained with the 40,000+ river images and features extracted in Python (EfficientNetBO, ResNet101, MLP, SVR and RFR).}
+
+\project{Peripheral Loans}
+     {IBM}
+     {React, NodeJS, IBM DB2, IBM Cloud Foundry}
+     {Jan 2022 -- Jun 2022}
+     {Engineered a Management System to facilitate device lending to IBM's Guadalajara employees during the Covid era.
+     Orchestrated the design and development of the User Interface as the Front-End specialist. Used Containers to deploy a scalable Back-End supporting more than 2,000 device records. Rigorously tested functionalities using Unitary Tests, Postman and Cypress, ensuring seamless alignment with user requirements.}
+
+\project{Hiredocs}
+     {Amdocs}
+     {HTML/CSS, JavaScript, NodeJS, MySQL}
+     {Jan 2021 -- Jun 2021}
+     {Contributed to the creation of a Tracking System for the Hiring Process at Amdocs. Connecting teams across global locations and as a key member of the Scrum Development Team, I played a role in designing and implementing the Front-End, while also integrating Back-End features to ensure robust Data Protection. Additionally, presented the system to Amdocs executives in Guadalajara, showcasing its capabilities and functionalities.}
+
+% --------- SKILLS ----------------
+\cvsection{Skills}
+
+\skill{SOFT}
+    {Problem Solving, Leadership, Teamwork, Empathy, Flexibility.}
+
+\skill{TECHNICAL}{
+    \subskill
+        {Languages}
+        {C++ (5 yrs), Python (5 yrs), JavaScript (4 yrs), HTML/CSS (4 yrs), SQL (4 yrs).}
+        \par
+    
+    \subskill
+        {Developer Tools}
+        {Figma (3 yrs), Git (5 yrs), Postman (4 yrs), Docker (3 yrs), Azure (2 yrs).}
+        \par
+    
+    \subskill
+        {Frameworks/Libraries}
+        {TensorFlow, Pandas, NumPy, Matplotlib, React.js, Express.js.}
+}
+
+\skill{PERSONAL HOBBIES}
+    {Swimming, Club de Algoritmia GDL, WaveSense.}
+    
+\skill{LANGUAGES}
+    {Spanish (Native), English (B2).}
+
+\end{document}
