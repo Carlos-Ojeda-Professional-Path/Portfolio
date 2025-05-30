@@ -6,7 +6,7 @@
 \documentclass[10pt,a4paper]{article}
 
 % --------- Paquetes ----------
-\usepackage[left=0.45in,right=0.45in,top=0.5in,bottom=0.35in]{geometry}
+\usepackage[left=0.45in,right=0.45in,top=0.45in,bottom=0.35in]{geometry}
 \usepackage{fontspec}
   \setmainfont{Times New Roman}
 \usepackage{xcolor}
@@ -34,7 +34,7 @@
 \newcommand{\skilllabel}[1]{\footnotesize\textit{#1}}
 \newcommand{\subskill}[2]{\underline{#1}: #2}
 
-\newcolumntype{t}{>{\raggedright\arraybackslash}p{0.095\linewidth}}
+\newcolumntype{t}{>{\raggedright\arraybackslash}p{0.1391376\linewidth}}
 \newcolumntype{d}{>{\raggedright\arraybackslash}X}
 
 % --------- Secciones ----------
@@ -62,7 +62,7 @@
   \end{tabularx}%
   \par
   {\leftskip=2.5em #5\par}
-  \vspace{1em}}
+  \vspace{0.9em}}
 
 
 \newcommand{\project}[5]{%
@@ -71,7 +71,7 @@
   \end{tabularx}%
   \par
   {\leftskip=2.5em #5\par}
-  \vspace{1em}}
+  \vspace{0.9em}}
 
 \newcommand{\skill}[2]{%
   \begin{tabularx}{\linewidth}{@{}t d@{}}%
@@ -109,6 +109,9 @@
 \entry{Master in Applied Artificial Intelligence}
       {Tec de Monterrey}{GPA 98/100}{Jan 2024 -- Present}
 
+\entry{Specialization in Machine Learning for Supply Chains}
+{LearnQuest}{4/4}{Mar 2025 - Apr 2025}
+
 \entry{B.S. in Computer Science and Technology}
       {Tec de Monterrey}{GPA 98/100}{Aug 2019 -- Jun 2023}
       [Honorable mention for outstanding academic performance.]
@@ -119,17 +122,23 @@
 % --------- EXPERIENCE ------------
 \cvsection{Experience}
 
+\role{Software Engineer}
+     {C3.AI}
+     {Zapopan, MX}
+     {Nov 2024 – May 2025}
+     {Reduced page load times by approximately 35\% on \href{https://c3.ai/products/c3-ai-reliability/}{Reliability}, C3.AI’s largest app, through bundle profiling, code splitting, and tight cross-team coordination. In  \href{https://c3.ai/products/c3-ai-process-optimization/}{Process Optimization}, raised backend test coverage from \textasciitilde{}60\% to \textasciitilde{}80\% and release confidence by launching PSR test workflows with PMs, authoring PSR onboarding documentation, and initiating a \texttt{pytest} suite for new ML Explainability features.}
+
 \role{Machine Learning Associate}
      {Tata Consultancy Services}
      {Zapopan, MX}
-     {Nov 2023 -- Present}
+     {Nov 2023 -- Nov 2024}
      {Contributed to crafting advanced classification models. Actively engaged in the implementation of cutting-edge prediction services on Google Cloud Platform (GCP) and Azure Machine Learning using TensorFlow Serving. Applied supervised machine learning models with TensorFlow and integrated LIME for model interpretability to discern feature impact.}
 
 \role{Front-End Developer}
      {Tata Consultancy Services}
      {Zapopan, MX}
      {Jan 2023 -- Nov 2023}
-     {Build innovative components to be used in Home Depot's e-commerce. Engineered modern user interfaces with React components by using Ant Design System, React Testing Library, Jira and Google Cloud Platform. Efficiently deployed, integrated and maintained software engineered by team, and updated GitHub Actions to improve continuous integration practices.}
+     {Built innovative components to be used in Home Depot's e-commerce. Engineered modern user interfaces with React components by using Ant Design System, React Testing Library, Jira and Google Cloud Platform. Efficiently deployed, integrated and maintained software engineered by team, and updated GitHub Actions to improve continuous integration practices.}
 
 \role{Junior Back-End Developer}
      {NextLine}
@@ -148,17 +157,11 @@
      State Line Weir using daylight images taken at one hour intervals from 2012 to 2019. Loss metrics were considered, selected and used to evaluate different models trained with the 40,000+ river images and features extracted in Python (EfficientNetBO, ResNet101, MLP, SVR and RFR).}
 
 \project{Peripheral Loans}
-     {IBM}
-     {React, NodeJS, IBM DB2, IBM Cloud Foundry}
-     {Jan 2022 -- Jun 2022}
-     {Engineered a Management System to facilitate device lending to IBM's Guadalajara employees during the Covid era.
-     Orchestrated the design and development of the User Interface as the Front-End specialist. Used Containers to deploy a scalable Back-End supporting more than 2,000 device records. Rigorously tested functionalities using Unitary Tests, Postman and Cypress, ensuring seamless alignment with user requirements.}
+    {IBM}
+    {React, NodeJS, IBM DB2, IBM Cloud Foundry, Postman, Cypress}
+    {Jan 2022 -- Jun 2022}
+    {Engineered a management system that enabled device lending for IBM Guadalajara during Covid. Worked as a full-stack developer, deploying containerized services supporting over 2,000 device records. Rigorously tested features with unit tests, Postman, and Cypress, ensuring seamless alignment with user requirements. Presented the system to executives, showcasing its capabilities and functionalities.}
 
-\project{Hiredocs}
-     {Amdocs}
-     {HTML/CSS, JavaScript, NodeJS, MySQL}
-     {Jan 2021 -- Jun 2021}
-     {Contributed to the creation of a Tracking System for the Hiring Process at Amdocs. Connecting teams across global locations and as a key member of the Scrum Development Team, I played a role in designing and implementing the Front-End, while also integrating Back-End features to ensure robust Data Protection. Additionally, presented the system to Amdocs executives in Guadalajara, showcasing its capabilities and functionalities.}
 
 % --------- SKILLS ----------------
 \cvsection{Skills}
